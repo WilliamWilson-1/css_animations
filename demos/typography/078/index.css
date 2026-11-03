@@ -1,0 +1,35 @@
+.demo-stage {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 560px;
+    font-family: sans-serif;
+}
+.loader{
+    position: relative;
+    font-size: 2em;
+    background: #fff;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5em;
+    padding: 10px;
+}
+.loader span{
+    color: #fff;
+    mix-blend-mode: difference;
+}
+.loader:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: #000;
+    animation: animate 3s linear infinite;
+}
+@keyframes animate{0%,100%{transform:translateX(0)}50%{transform:translateX(400%)}}
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */

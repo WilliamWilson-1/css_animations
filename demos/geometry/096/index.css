@@ -1,0 +1,2 @@
+.demo-stage{margin:0;display:flex;align-items:center;justify-content:center;min-height:560px;background:#08292d}.waves{position:relative;width:320px;height:320px}.waves i{position:absolute;inset:0;border:3px solid #77efc0;border-radius:50%;animation:ripple 3s cubic-bezier(.2,.5,.4,1) infinite;animation-delay:calc(var(--i)*-.6s)}@keyframes ripple{0%{transform:scale(.05);opacity:0}10%{opacity:1}100%{transform:scale(1);opacity:0}}
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */

@@ -1,30 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>css-107</title>
-    <link rel="stylesheet" href="static/css/app.css">
-    <link rel="icon" href="static/icon/css2.png">
-    <script src="static/js/index.js"></script>
-    <script src="static/js/vue.global.js"></script>
-    <script src="static/js/catalogue.js"></script>
-    <style>
-        #app{
-            padding-bottom: 500px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="107 个 CSS 动画实验：分类浏览、实时预览、播放控制和独立源码。">
+  <title>CSS Animations · 动效档案</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/gallery.css">
+  <script src="assets/catalog.js" defer></script>
+  <script src="assets/gallery.js" defer></script>
 </head>
 <body>
-
-<div id="app">
-    <table>
-
-        <tbody>
-        <tr v-for="tr in tableData(data,3)">
-            <td v-for="td in tr"><a :href="'src/' + td + '/index.html'">{{ td }}</a></td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+  <a class="skip-link" href="#collection">跳到动画集合</a>
+  <header class="masthead">
+    <a class="brand" href="./" aria-label="CSS Animations 首页"><span class="brand-mark" aria-hidden="true">{<i></i>}</span> CSS<span>ANIMATIONS</span></a>
+    <span class="edition">COLLECTION 001—107 <span class="status-dot"></span> 纯粹的 CSS 实验</span>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow">A LITTLE CODE. A LOT OF MOTION.</p>
+        <h1 id="page-title">让代码，<br><span>动起来。</span><sup>107</sup></h1>
+        <p class="description">一份关于旋转、节奏与想象力的动效档案。<br>从一个小球开始，发现 CSS 的更多可能。</p>
+        <div class="collection-meta"><span>107 个实验</span><span>7 种分类</span><span>零运行依赖</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><span class="orbit-dot"></span><div class="art-caption">EXPERIMENT / INFINITE ROTATION<span>CSS · 3D TRANSFORM</span></div></div>
+    </section>
+    <section id="collection" class="collection" aria-labelledby="collection-title">
+      <div class="section-top"><h2 id="collection-title">探索动效 <span>/ THE COLLECTION</span></h2><span class="section-index">01 — 107</span></div>
+      <div class="toolbar">
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="search" type="search" placeholder="搜索名称、编号、标签…" autocomplete="off" aria-label="搜索动画"><kbd>/</kbd></label>
+        <div class="playback"><button id="play-toggle" class="control" type="button" aria-pressed="false">暂停动效</button><label class="speed">速度 <select id="speed" aria-label="播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label></div>
+      </div>
+      <nav id="categories" class="categories" aria-label="动画分类"></nav>
+      <div class="results-line"><p id="results-count" role="status" aria-live="polite"></p><p>点击预览查看详情与源码 <span aria-hidden="true">↗</span></p></div>
+      <p id="motion-note" class="motion-note" hidden>已遵循系统的减少动态效果设置。点击“播放动效”可主动开启预览。</p>
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty" hidden><span>∅</span><h3>暂时没有匹配的动效</h3><p>试试“圆环”“3D”或原始编号。</p><button id="reset" class="control" type="button">清除筛选</button></div>
+      <div class="pagination"><button id="prev-page" class="control" type="button">← 上一页</button><span id="page-info" aria-live="polite"></span><button id="next-page" class="control" type="button">下一页 →</button></div>
+    </section>
+  </main>
+  <footer><span>CSS ANIMATIONS <b>© 2026</b></span><p>保持好奇，让每一帧都有意思。</p><a href="README.md">项目说明 ↗</a></footer>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="detail-top"><span id="detail-category" class="eyebrow"></span><button id="close-detail" class="icon-button" type="button" aria-label="关闭详情">×</button></div>
+    <h2 id="detail-title"></h2><p id="detail-note"></p>
+    <div id="detail-preview" class="detail-preview"></div>
+    <div class="detail-actions"><button id="detail-toggle" class="control" type="button" aria-pressed="false">暂停动效</button><label class="speed">速度 <select id="detail-speed" aria-label="详情播放速度"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><button id="replay" class="control" type="button">↻ 重新播放</button><a id="open-demo" class="control" target="_blank" rel="noopener">独立打开 ↗</a><a id="open-css" class="control" target="_blank" rel="noopener">查看 CSS ↗</a><a id="open-html" class="control" target="_blank" rel="noopener">查看 HTML ↗</a></div>
+  </dialog>
+  <noscript><p class="noscript">请启用 JavaScript 以浏览分类集合，也可以直接打开 demos 目录中的独立示例。</p></noscript>
 </body>
 </html>

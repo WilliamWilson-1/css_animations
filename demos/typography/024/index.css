@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.demo-stage{
+    background: #004EFF;
+}
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+ul li{
+    list-style: none;
+    float: left;
+    font-family: Arial;
+    font-size: 5em;
+    color: #fff;
+    font-weight: bold;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    animation: animate 3s infinite;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg) translateX(-30px);
+    }
+    50%{
+        opacity: 1;
+        transform: rotateY(0deg) translateX(30px) scale(0.4);
+    }
+    100%{
+        opacity: 0;
+        transform: rotateY(0deg);
+    }
+}
+
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */

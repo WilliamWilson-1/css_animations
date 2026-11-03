@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN" data-demo="007" data-width="800" data-height="560">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>007 · 流体加载效果 | CSS Animations</title>
+  <link rel="icon" href="../../../assets/icon.png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../../../assets/demo.css">
+  <script src="../../../assets/demo.js" defer></script>
+</head>
+<body>
+  <main class="demo-stage" aria-label="流体加载效果">
+<section>
+    <svg>
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+            <feColorMatrix values="
+                        1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 20 -10"></feColorMatrix>
+
+
+        </filter>
+    </svg>
+    <div class="loader">
+        <span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span><span
+            style="--i:4"></span><span style="--i:5"></span><span style="--i:6"></span><span
+            style="--i:7"></span><span style="--i:8"></span>
+
+        <span class="rotate" style="--j:0"></span>
+        <span class="rotate" style="--j:1"></span>
+        <span class="rotate" style="--j:2"></span>
+        <span class="rotate" style="--j:3"></span>
+        <span class="rotate" style="--j:4"></span>
+
+
+    </div>
+</section>
+  </main>
+</body>
+</html>

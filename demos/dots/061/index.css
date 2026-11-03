@@ -1,0 +1,57 @@
+.demo-stage{
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    list-style: none;
+    background: #fff;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+    /*box-shadow: 10px 20px 0 #fff, -10px -20px 0 #fff;*/
+}
+ul li:nth-child(1){
+     animation-delay: -0.2s;
+ }
+ul li:nth-child(2){
+    animation-delay: -0.4s;
+}
+ul li:nth-child(3){
+    animation-delay: -0.6s;
+}
+ul li:nth-child(4){
+    animation-delay: -0.8s;
+}
+ul li:nth-child(5){
+     animation-delay: -1s;
+ }
+
+@keyframes animate {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */

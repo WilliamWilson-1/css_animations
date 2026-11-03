@@ -1,0 +1,17 @@
+/* Shared presentation only. Each example's animation stays in its own index.css. */
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { background: #fff; }
+body > .demo-stage {
+  position: absolute; left: 50%; top: 50%;
+  width: var(--canvas-width); height: var(--canvas-height);
+  min-height: var(--canvas-height); margin: 0; overflow: hidden;
+  transform: translate(-50%, -50%) scale(var(--canvas-scale, 1));
+  transform-origin: center;
+}
+html[data-paused] *, html[data-paused] *::before, html[data-paused] *::after {
+  animation-play-state: paused !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-motion="allow"]) *, html:not([data-motion="allow"]) *::before,
+  html:not([data-motion="allow"]) *::after { animation-play-state: paused !important; transition-duration: 0s !important; }
+}

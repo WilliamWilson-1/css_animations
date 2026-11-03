@@ -1,0 +1,2 @@
+.demo-stage{margin:0;display:flex;align-items:center;justify-content:center;min-height:560px;background:#171c2b;font-family:system-ui;color:#f6c876}.meter{width:300px;text-align:center}.number{font-size:100px;font-variant-numeric:tabular-nums}.number:after{content:'%';font-size:.4em}.track{height:4px;background:#ffffff18;margin-top:20px}.track i{display:block;height:100%;background:#f6c876;transform:scaleX(0);transform-origin:left}.meter p{letter-spacing:.4em;color:#8d98af;font-size:12px}
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */

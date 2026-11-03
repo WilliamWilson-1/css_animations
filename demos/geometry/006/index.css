@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.demo-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 560px;
+    background: #000;
+}
+.loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+.loader:hover{
+    background: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+}
+.loader span{
+    position: absolute;
+    display: block;
+}
+.loader span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+    animation-delay: 0s;
+}
+@keyframes animate1 { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+.loader span:nth-child(3){
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0s;
+}
+@keyframes animate3 { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+.loader span:nth-child(2){
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate2 { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+.loader span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate4 { from { transform: translateY(100%); } to { transform: translateY(-100%); } }
+
+
+
+
+
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */

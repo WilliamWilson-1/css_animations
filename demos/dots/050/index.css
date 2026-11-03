@@ -1,0 +1,76 @@
+.demo-stage{
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    height: 80px;
+    /*background: #fff;*/
+}
+.box span{
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+}
+.box span:nth-child(1){
+    background: #fff900;
+    box-shadow: 0 0 25px #fff900;
+    animation: animate 2s linear infinite;
+}
+.box span:nth-child(2){
+    background: #08ff28;
+    box-shadow: 0 0 25px #08ff28;
+    animation: animate 2s linear infinite;
+    animation-delay: -1s;
+}
+.box span:nth-child(3){
+    background: #ff005a;
+    box-shadow: 0 0 25px #ff005a;
+    animation: animate 2s linear infinite;
+    animation-delay: -0.5s;
+}
+.box span:nth-child(4){
+    background: #3896ff;
+    box-shadow: 0 0 25px #3896ff;
+    animation: animate 2s linear infinite;
+    animation-delay: -1.5s;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    5%{
+        transform: translate(0px, 0px);
+    }
+    20%{
+        transform: translate(40px, 0px);
+    }
+    25%{
+        transform: translate(40px, 0px);
+    }
+    50%{
+        transform: translate(40px, 40px);
+    }
+    55%{
+        transform: translate(40px, 40px);
+    }
+    75%{
+        transform: translate(0px, 40px);
+    }
+    80%{
+        transform: translate(0px, 40px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+/* Canvas dimensions and viewport scaling are managed by assets/demo.js. */
