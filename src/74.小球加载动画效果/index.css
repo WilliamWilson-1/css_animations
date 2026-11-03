@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        box-shadow: -100px 0 0 #262626, 10px 0 0 #262626;
+        transform: rotate(0deg);
+    }
+    25% {
+        box-shadow: -10px 0 0 #262626, 10px 0 0 #262626;
+    }
+    50% {
+        box-shadow: -10px 0 0 #262626, 100px 0 0 #262626;
+    }
+    75% {
+        box-shadow: -10px 0 0 #262626, 10px 0 0 #262626;
+    }
+    100% {
+        box-shadow: -100px 0 0 #262626, 10px 0 0 #262626;
+        transform: rotate(360deg);
+    }
+}

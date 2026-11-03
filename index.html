@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-107</title>
+    <link rel="stylesheet" href="static/css/app.css">
+    <link rel="icon" href="static/icon/css2.png">
+    <script src="static/js/index.js"></script>
+    <script src="static/js/vue.global.js"></script>
+    <script src="static/js/catalogue.js"></script>
+    <style>
+        #app{
+            padding-bottom: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <table>
+
+        <tbody>
+        <tr v-for="tr in tableData(data,3)">
+            <td v-for="td in tr"><a :href="'src/' + td + '/index.html'">{{ td }}</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

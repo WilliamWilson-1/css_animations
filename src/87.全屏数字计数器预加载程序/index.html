@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>87.全屏数字计数器预加载程序</title>
+    <link rel="icon" href="../../static/icon/css2.png">
+    <link rel="stylesheet" href="index.css">
+    <script src="../../static/js/jquery.js"></script>
+</head>
+<body>
+<div class="welcome">
+    <h2>Welcome</h2>
+</div>
+<section>
+
+    <div class="loader"></div>
+    <div class="count"></div>
+</section>
+
+<script>
+    $(document).ready(function(){
+        let count = 0
+        let counter = setInterval(function(){
+            if(count<101){
+                $('.count').text(count + '%')
+                $('.loader').css('width',count + '%')
+                count++
+            }else {
+                clearInterval(counter)
+            }
+        },80)
+    })
+</script>
+</body>
+</html>

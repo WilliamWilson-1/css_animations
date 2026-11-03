@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>105.使用Html、CSS和Jquery的数字计数器预加载程序</title>
+    <link rel="icon" href="../../static/icon/css2.png">
+    <link rel="stylesheet" href="index.css">
+    <script src="../../static/js/jquery.js"></script>
+
+</head>
+<body>
+<div class="preloader">
+    <div class="counter">0</div>
+</div>
+<section>
+    <h2>Welcome back to all!<span>Stay TunedFor More Video...</span></h2>
+    <p>Lorem ipsum dolor sit amet consectetur adilpisicing elit, sed do eiusmod tempor incididunt ut abore et dolore magna alqua. Ut enim ad minimvenilam,quis nostrud exercitation ullamco laboris nisi ut aqulp ex ea commodo consequat buls aute rure dolor in reprehenderit in voluptate veltesse cilum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden,sunt in culpa aui oficia deserunt molit anim id estlaborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do elusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim/eniam,quis nostrud exercilation ulamco laboris nisl ut allquip ex ea commodo consequat Duis aute irure dolor in reprehendertin voluptate veltesse cilum dolore eu fugiat nulla pariatur, Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficie deserunt molit anim id estlaborumlorem ipsum dolor sit amet, consectetur adipisicing elit, sed do elusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, auis nostrud exercitation ullamco laboris nisi ut aliguip ex ea commodo conseauat</p>
+</section>
+
+<script>
+function counter(){
+    var  count = setInterval(function () {
+        var c = parseInt($('.counter').text());
+        $('.counter').text((++c).toString());
+        if(c === 100){
+            clearInterval(count);
+            $('.counter').addClass('hide')
+            $('.preloader').addClass('active')
+        }
+
+    },60)
+}
+counter()
+</script>
+</body>
+</html>
